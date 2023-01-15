@@ -48,7 +48,7 @@ public interface FarmaciaMapping extends GenericMapping<FarmaciaDTO, Farmacia> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intCodigoFarmacia", target = "intCodigoFarmacia")
     @Override
-    public FarmaciaDTO obtenerDto(Farmacia entity);
+    public FarmaciaDTO getDto(Farmacia entity);
 
     /**
      * TODO: Definición de {@code withId}.

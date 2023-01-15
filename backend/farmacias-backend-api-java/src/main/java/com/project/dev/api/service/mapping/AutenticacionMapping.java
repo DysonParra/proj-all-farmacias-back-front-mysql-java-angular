@@ -48,7 +48,7 @@ public interface AutenticacionMapping extends GenericMapping<AutenticacionDTO, A
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "strUsuario", target = "strUsuario")
     @Override
-    public AutenticacionDTO obtenerDto(Autenticacion entity);
+    public AutenticacionDTO getDto(Autenticacion entity);
 
     /**
      * TODO: Definición de {@code withId}.

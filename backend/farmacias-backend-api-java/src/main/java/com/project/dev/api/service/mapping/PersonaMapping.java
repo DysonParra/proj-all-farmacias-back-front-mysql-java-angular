@@ -48,7 +48,7 @@ public interface PersonaMapping extends GenericMapping<PersonaDTO, Persona> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdPersona", target = "intIdPersona")
     @Override
-    public PersonaDTO obtenerDto(Persona entity);
+    public PersonaDTO getDto(Persona entity);
 
     /**
      * TODO: Definición de {@code withId}.

@@ -48,7 +48,7 @@ public interface BarrioMapping extends GenericMapping<BarrioDTO, Barrio> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdBarrio", target = "intIdBarrio")
     @Override
-    public BarrioDTO obtenerDto(Barrio entity);
+    public BarrioDTO getDto(Barrio entity);
 
     /**
      * TODO: Definición de {@code withId}.

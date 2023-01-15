@@ -48,7 +48,7 @@ public interface CiudadMapping extends GenericMapping<CiudadDTO, Ciudad> {
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdCiudad", target = "intIdCiudad")
     @Override
-    public CiudadDTO obtenerDto(Ciudad entity);
+    public CiudadDTO getDto(Ciudad entity);
 
     /**
      * TODO: Definición de {@code withId}.

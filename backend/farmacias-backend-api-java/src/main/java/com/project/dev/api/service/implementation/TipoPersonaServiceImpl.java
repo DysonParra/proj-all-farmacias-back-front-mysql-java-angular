@@ -60,7 +60,7 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
     @Override
     public List<TipoPersonaDTO> getAllEntities() throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoPersona");
-        return entityMapping.obtenerDto(entityRepository.findAll());
+        return entityMapping.getDto(entityRepository.findAll());
     }
 
     /**
@@ -73,7 +73,7 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
     @Override
     public Page<TipoPersonaDTO> getAllEntitiesPaged(Pageable pageable) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoPersona con paginacion");
-        return entityRepository.findAll(pageable).map(entityMapping::obtenerDto);
+        return entityRepository.findAll(pageable).map(entityMapping::getDto);
     }
 
     /**
@@ -91,7 +91,7 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
         TipoPersona entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TipoPersonaDTO actualEntity = entityMapping.obtenerDto(entity);
+        TipoPersonaDTO actualEntity = entityMapping.getDto(entity);
         return actualEntity;
     }
 
@@ -107,7 +107,7 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
         log.debug("Solicitud para buscar la Entidad tipo TipoPersona: {}", id);
         TipoPersona searchedEntity = entityRepository.findById(Long.parseLong(id))
                 .orElseThrow(() -> new EntityNotFoundException(id));
-        return entityMapping.obtenerDto(searchedEntity);
+        return entityMapping.getDto(searchedEntity);
     }
 
     /**
@@ -132,7 +132,7 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
     @Override
     public List<TipoPersonaDTO> searchEntities(String query) throws Exception {
         log.debug("Solicitud para listar todas las Entidades tipo TipoPersona: {}", query);
-        return entityMapping.obtenerDto(entityRepository.searchEntities(query));
+        return entityMapping.getDto(entityRepository.searchEntities(query));
     }
 
     /**
@@ -146,6 +146,6 @@ public class TipoPersonaServiceImpl implements TipoPersonaService {
     @Override
     public Page<TipoPersonaDTO> searchEntitiesPaged(String query, Pageable pageable) {
         log.debug("Solicitud para buscar una pagina de la entidad tipo TipoPersona para consulta {}", query);
-        return entityRepository.searchEntities(query, pageable).map(entityMapping::obtenerDto);
+        return entityRepository.searchEntities(query, pageable).map(entityMapping::getDto);
     }
 }

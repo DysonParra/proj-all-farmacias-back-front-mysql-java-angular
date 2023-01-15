@@ -48,7 +48,7 @@ public interface PropiedadesMapping extends GenericMapping<PropiedadesDTO, Propi
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdPropiedad", target = "intIdPropiedad")
     @Override
-    public PropiedadesDTO obtenerDto(Propiedades entity);
+    public PropiedadesDTO getDto(Propiedades entity);
 
     /**
      * TODO: Definición de {@code withId}.

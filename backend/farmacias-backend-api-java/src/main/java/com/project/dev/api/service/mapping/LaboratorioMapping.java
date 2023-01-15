@@ -48,7 +48,7 @@ public interface LaboratorioMapping extends GenericMapping<LaboratorioDTO, Labor
     // Deben ser el campo clave de la base de datos.
     @Mapping(source = "intIdLaboratorio", target = "intIdLaboratorio")
     @Override
-    public LaboratorioDTO obtenerDto(Laboratorio entity);
+    public LaboratorioDTO getDto(Laboratorio entity);
 
     /**
      * TODO: Definición de {@code withId}.
