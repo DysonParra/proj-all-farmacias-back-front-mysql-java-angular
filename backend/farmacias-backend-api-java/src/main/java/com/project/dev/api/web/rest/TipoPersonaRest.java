@@ -272,7 +272,7 @@ public class TipoPersonaRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/TipoPersona/{query}/pages")
+    @GetMapping("/TipoPersona/search/{query}/pages")
     public ResponseEntity<List<TipoPersonaDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type TipoPersona with the search : {}", query);
         Page<TipoPersonaDTO> page = null;
@@ -281,7 +281,7 @@ public class TipoPersonaRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoPersona/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/TipoPersona/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 

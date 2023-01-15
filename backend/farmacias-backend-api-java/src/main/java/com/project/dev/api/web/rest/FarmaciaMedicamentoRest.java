@@ -272,7 +272,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento/{query}/pages")
+    @GetMapping("/FarmaciaMedicamento/search/{query}/pages")
     public ResponseEntity<List<FarmaciaMedicamentoDTO>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type FarmaciaMedicamento with the search : {}", query);
         Page<FarmaciaMedicamentoDTO> page = null;
@@ -281,7 +281,7 @@ public class FarmaciaMedicamentoRest {
         } catch (Exception e) {
             e.printStackTrace(System.out);
         }
-        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/FarmaciaMedicamento/{query}/pages/" + query);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/FarmaciaMedicamento/search/{query}/pages/" + query);
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
