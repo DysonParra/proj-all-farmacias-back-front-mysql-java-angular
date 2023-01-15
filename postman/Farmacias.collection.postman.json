@@ -12,7 +12,7 @@
 					"name": "Autenticacion",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -272,6 +272,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -552,7 +661,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -641,7 +750,7 @@
 					"name": "Barrio",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -901,6 +1010,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -1181,7 +1399,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -1270,7 +1488,7 @@
 					"name": "Ciudad",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -1536,6 +1754,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -1816,7 +2143,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -1905,7 +2232,7 @@
 					"name": "FarmaciaMedicamento",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -2165,6 +2492,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -2445,7 +2881,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -2534,7 +2970,7 @@
 					"name": "Farmacia",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -2802,6 +3238,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -3082,7 +3627,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -3171,7 +3716,7 @@
 					"name": "LaboratorioMedicamento",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -3431,6 +3976,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -3711,7 +4365,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -3800,7 +4454,7 @@
 					"name": "Laboratorio",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -4064,6 +4718,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -4344,7 +5107,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -4433,7 +5196,7 @@
 					"name": "MedicamentoOnline",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -4719,6 +5482,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -4999,7 +5871,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -5088,7 +5960,7 @@
 					"name": "Medicamento",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -5378,6 +6250,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -5658,7 +6639,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -5747,7 +6728,7 @@
 					"name": "Persona",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -6017,6 +6998,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -6297,7 +7387,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -6386,7 +7476,7 @@
 					"name": "Propiedades",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -6652,6 +7742,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -6932,7 +8131,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -7021,7 +8220,7 @@
 					"name": "TipoPersona",
 					"item": [
 						{
-							"name": "Obtener Todos los Registros",
+							"name": "Obtener Todos los Registros (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
@@ -7283,6 +8482,115 @@
 							"response": []
 						},
 						{
+							"name": "Obtener Todos los Registros",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Se obtuvieron enlaces.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._links).not.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía ('_embedded' not undefined).\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData._embedded).not.be.to.eql(undefined);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Todos los Registros Paginados",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Body existe\", function () {",
+											"    pm.response.to.be.withBody; // body tiene que exitir",
+											"    pm.response.to.be.json;     // Que body sea un JSON válido",
+											"});",
+											"",
+											"pm.test(\"No ocurrió error.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.error).to.be.eql(undefined);",
+											"});",
+											"",
+											"pm.test(\"Body es un array\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('array');",
+											"});",
+											"",
+											"pm.test(\"Lista no está vacía.\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.length).not.be.to.eql(0);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{host}}:{{port}}/{{api}}/{{FolderName}}/{{pages}}?page=0&size=1",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{api}}",
+										"{{FolderName}}",
+										"{{pages}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Buscar Registros (Resultado vacío)",
 							"event": [
 								{
@@ -7563,7 +8871,7 @@
 							"response": []
 						},
 						{
-							"name": "Obtener Todos los Registros Paginados",
+							"name": "Obtener Todos los Registros Paginados (Resultado vacío)",
 							"event": [
 								{
 									"listen": "test",
