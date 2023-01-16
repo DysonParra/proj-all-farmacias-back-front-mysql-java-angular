@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.BarrioDTO;
-import com.project.dev.api.service.BarrioService;
+import com.project.dev.api.service.implementation.BarrioServiceImpl;
 import com.project.dev.api.web.rest.assembler.BarrioRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class BarrioRest {
 
     private final Logger log = LoggerFactory.getLogger(BarrioRest.class);
-    private final BarrioService entityService;
+    private final BarrioServiceImpl entityService;
     private final BarrioRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class BarrioRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public BarrioRest(BarrioService entityService,
+    public BarrioRest(BarrioServiceImpl entityService,
             BarrioRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

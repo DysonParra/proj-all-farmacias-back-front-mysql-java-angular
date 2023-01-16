@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.MedicamentoOnline;
 import com.project.dev.api.dto.MedicamentoOnlineDTO;
 import com.project.dev.api.repository.MedicamentoOnlineRepository;
-import com.project.dev.api.service.MedicamentoOnlineService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.MedicamentoOnlineMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class MedicamentoOnlineServiceImpl implements MedicamentoOnlineService {
+public class MedicamentoOnlineServiceImpl implements GenericService<MedicamentoOnlineDTO> {
 
     private final Logger log = LoggerFactory.getLogger(MedicamentoOnlineServiceImpl.class);
     private final MedicamentoOnlineRepository entityRepository;

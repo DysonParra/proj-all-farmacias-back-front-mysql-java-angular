@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.CiudadDTO;
-import com.project.dev.api.service.CiudadService;
+import com.project.dev.api.service.implementation.CiudadServiceImpl;
 import com.project.dev.api.web.rest.assembler.CiudadRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class CiudadRest {
 
     private final Logger log = LoggerFactory.getLogger(CiudadRest.class);
-    private final CiudadService entityService;
+    private final CiudadServiceImpl entityService;
     private final CiudadRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class CiudadRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public CiudadRest(CiudadService entityService,
+    public CiudadRest(CiudadServiceImpl entityService,
             CiudadRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Propiedades;
 import com.project.dev.api.dto.PropiedadesDTO;
 import com.project.dev.api.repository.PropiedadesRepository;
-import com.project.dev.api.service.PropiedadesService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.PropiedadesMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class PropiedadesServiceImpl implements PropiedadesService {
+public class PropiedadesServiceImpl implements GenericService<PropiedadesDTO> {
 
     private final Logger log = LoggerFactory.getLogger(PropiedadesServiceImpl.class);
     private final PropiedadesRepository entityRepository;

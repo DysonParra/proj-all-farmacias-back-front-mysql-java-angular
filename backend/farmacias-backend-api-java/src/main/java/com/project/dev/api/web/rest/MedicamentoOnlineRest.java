@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.MedicamentoOnlineDTO;
-import com.project.dev.api.service.MedicamentoOnlineService;
+import com.project.dev.api.service.implementation.MedicamentoOnlineServiceImpl;
 import com.project.dev.api.web.rest.assembler.MedicamentoOnlineRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MedicamentoOnlineRest {
 
     private final Logger log = LoggerFactory.getLogger(MedicamentoOnlineRest.class);
-    private final MedicamentoOnlineService entityService;
+    private final MedicamentoOnlineServiceImpl entityService;
     private final MedicamentoOnlineRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class MedicamentoOnlineRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public MedicamentoOnlineRest(MedicamentoOnlineService entityService,
+    public MedicamentoOnlineRest(MedicamentoOnlineServiceImpl entityService,
             MedicamentoOnlineRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

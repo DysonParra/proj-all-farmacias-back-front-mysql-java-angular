@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.AutenticacionDTO;
-import com.project.dev.api.service.AutenticacionService;
+import com.project.dev.api.service.implementation.AutenticacionServiceImpl;
 import com.project.dev.api.web.rest.assembler.AutenticacionRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class AutenticacionRest {
 
     private final Logger log = LoggerFactory.getLogger(AutenticacionRest.class);
-    private final AutenticacionService entityService;
+    private final AutenticacionServiceImpl entityService;
     private final AutenticacionRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class AutenticacionRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public AutenticacionRest(AutenticacionService entityService,
+    public AutenticacionRest(AutenticacionServiceImpl entityService,
             AutenticacionRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

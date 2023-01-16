@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.LaboratorioMedicamentoDTO;
-import com.project.dev.api.service.LaboratorioMedicamentoService;
+import com.project.dev.api.service.implementation.LaboratorioMedicamentoServiceImpl;
 import com.project.dev.api.web.rest.assembler.LaboratorioMedicamentoRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class LaboratorioMedicamentoRest {
 
     private final Logger log = LoggerFactory.getLogger(LaboratorioMedicamentoRest.class);
-    private final LaboratorioMedicamentoService entityService;
+    private final LaboratorioMedicamentoServiceImpl entityService;
     private final LaboratorioMedicamentoRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class LaboratorioMedicamentoRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public LaboratorioMedicamentoRest(LaboratorioMedicamentoService entityService,
+    public LaboratorioMedicamentoRest(LaboratorioMedicamentoServiceImpl entityService,
             LaboratorioMedicamentoRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Ciudad;
 import com.project.dev.api.dto.CiudadDTO;
 import com.project.dev.api.repository.CiudadRepository;
-import com.project.dev.api.service.CiudadService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.CiudadMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class CiudadServiceImpl implements CiudadService {
+public class CiudadServiceImpl implements GenericService<CiudadDTO> {
 
     private final Logger log = LoggerFactory.getLogger(CiudadServiceImpl.class);
     private final CiudadRepository entityRepository;

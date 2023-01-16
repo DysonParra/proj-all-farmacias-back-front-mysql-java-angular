@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.FarmaciaMedicamento;
 import com.project.dev.api.dto.FarmaciaMedicamentoDTO;
 import com.project.dev.api.repository.FarmaciaMedicamentoRepository;
-import com.project.dev.api.service.FarmaciaMedicamentoService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.FarmaciaMedicamentoMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class FarmaciaMedicamentoServiceImpl implements FarmaciaMedicamentoService {
+public class FarmaciaMedicamentoServiceImpl implements GenericService<FarmaciaMedicamentoDTO> {
 
     private final Logger log = LoggerFactory.getLogger(FarmaciaMedicamentoServiceImpl.class);
     private final FarmaciaMedicamentoRepository entityRepository;

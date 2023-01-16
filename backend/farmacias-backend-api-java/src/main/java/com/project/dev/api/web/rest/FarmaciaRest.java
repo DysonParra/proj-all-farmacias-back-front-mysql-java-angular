@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.FarmaciaDTO;
-import com.project.dev.api.service.FarmaciaService;
+import com.project.dev.api.service.implementation.FarmaciaServiceImpl;
 import com.project.dev.api.web.rest.assembler.FarmaciaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class FarmaciaRest {
 
     private final Logger log = LoggerFactory.getLogger(FarmaciaRest.class);
-    private final FarmaciaService entityService;
+    private final FarmaciaServiceImpl entityService;
     private final FarmaciaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class FarmaciaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public FarmaciaRest(FarmaciaService entityService,
+    public FarmaciaRest(FarmaciaServiceImpl entityService,
             FarmaciaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

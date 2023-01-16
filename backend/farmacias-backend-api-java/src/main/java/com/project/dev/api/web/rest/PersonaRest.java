@@ -15,7 +15,7 @@
 package com.project.dev.api.web.rest;
 
 import com.project.dev.api.dto.PersonaDTO;
-import com.project.dev.api.service.PersonaService;
+import com.project.dev.api.service.implementation.PersonaServiceImpl;
 import com.project.dev.api.web.rest.assembler.PersonaRestAssembler;
 import com.project.dev.api.web.rest.util.PaginationUtil;
 import io.swagger.annotations.Api;
@@ -61,7 +61,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class PersonaRest {
 
     private final Logger log = LoggerFactory.getLogger(PersonaRest.class);
-    private final PersonaService entityService;
+    private final PersonaServiceImpl entityService;
     private final PersonaRestAssembler entityRestAssembler;
 
     /**
@@ -70,7 +70,7 @@ public class PersonaRest {
      * @param entityService       servicio de la entidad.
      * @param entityRestAssembler ensamblador de recurso de la entidad.
      */
-    public PersonaRest(PersonaService entityService,
+    public PersonaRest(PersonaServiceImpl entityService,
             PersonaRestAssembler entityRestAssembler) {
         this.entityService = entityService;
         this.entityRestAssembler = entityRestAssembler;

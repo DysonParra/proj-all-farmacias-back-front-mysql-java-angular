@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Persona;
 import com.project.dev.api.dto.PersonaDTO;
 import com.project.dev.api.repository.PersonaRepository;
-import com.project.dev.api.service.PersonaService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.PersonaMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class PersonaServiceImpl implements PersonaService {
+public class PersonaServiceImpl implements GenericService<PersonaDTO> {
 
     private final Logger log = LoggerFactory.getLogger(PersonaServiceImpl.class);
     private final PersonaRepository entityRepository;

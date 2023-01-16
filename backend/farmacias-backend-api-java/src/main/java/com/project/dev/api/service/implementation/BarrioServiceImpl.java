@@ -17,7 +17,7 @@ package com.project.dev.api.service.implementation;
 import com.project.dev.api.domain.Barrio;
 import com.project.dev.api.dto.BarrioDTO;
 import com.project.dev.api.repository.BarrioRepository;
-import com.project.dev.api.service.BarrioService;
+import com.project.dev.api.service.GenericService;
 import com.project.dev.api.service.exception.EntityNotFoundException;
 import com.project.dev.api.service.mapping.BarrioMapping;
 import java.util.List;
@@ -36,7 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @org.springframework.stereotype.Service
-public class BarrioServiceImpl implements BarrioService {
+public class BarrioServiceImpl implements GenericService<BarrioDTO> {
 
     private final Logger log = LoggerFactory.getLogger(BarrioServiceImpl.class);
     private final BarrioRepository entityRepository;
