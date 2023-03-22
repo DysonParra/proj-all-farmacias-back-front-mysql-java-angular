@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoOnlineRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {MedicamentoOnlineRepository}
  *
  * @version         2.0
  *

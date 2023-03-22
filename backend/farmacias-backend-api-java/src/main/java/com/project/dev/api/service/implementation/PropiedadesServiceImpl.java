@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PropiedadesServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {PropiedadesServiceImpl}
  *
  * @version         2.0
  *

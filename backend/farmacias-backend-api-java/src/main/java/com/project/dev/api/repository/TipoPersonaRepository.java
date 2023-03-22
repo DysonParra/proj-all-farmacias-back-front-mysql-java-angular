@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoPersonaRepository}
  *
  * @version         2.0
  *

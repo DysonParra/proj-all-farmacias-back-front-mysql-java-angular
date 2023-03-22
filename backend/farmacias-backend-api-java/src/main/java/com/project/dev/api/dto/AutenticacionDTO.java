@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutenticacionDTO}
  *
  * @version         2.0
  *

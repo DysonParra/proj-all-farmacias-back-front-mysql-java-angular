@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {PersonaRestAssembler}
  *
  * @version         2.0
  *

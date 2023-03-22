@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {MedicamentoMapping}
  *
  * @version         2.0
  *

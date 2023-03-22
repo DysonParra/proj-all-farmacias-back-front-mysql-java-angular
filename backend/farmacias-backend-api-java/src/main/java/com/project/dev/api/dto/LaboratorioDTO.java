@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {LaboratorioDTO}
  *
  * @version         2.0
  *

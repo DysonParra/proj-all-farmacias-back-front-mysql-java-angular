@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PropiedadesMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {PropiedadesMapping}
  *
  * @version         2.0
  *

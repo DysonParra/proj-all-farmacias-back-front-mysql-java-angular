@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {PersonaServiceImpl}
  *
  * @version         2.0
  *

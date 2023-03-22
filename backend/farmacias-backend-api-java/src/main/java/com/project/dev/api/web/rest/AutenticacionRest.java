@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutenticacionRest}
  *
  * @version         2.0
  *

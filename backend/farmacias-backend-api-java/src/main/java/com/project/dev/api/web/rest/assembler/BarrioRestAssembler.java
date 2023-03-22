@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {BarrioRestAssembler}
  *
  * @version         2.0
  *

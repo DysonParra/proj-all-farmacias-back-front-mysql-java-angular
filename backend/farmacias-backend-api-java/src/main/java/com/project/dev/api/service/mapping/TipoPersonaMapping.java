@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {TipoPersonaMapping}
  *
  * @version         2.0
  *

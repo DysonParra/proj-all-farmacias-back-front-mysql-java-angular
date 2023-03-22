@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutenticacionRestAssembler}
  *
  * @version         2.0
  *

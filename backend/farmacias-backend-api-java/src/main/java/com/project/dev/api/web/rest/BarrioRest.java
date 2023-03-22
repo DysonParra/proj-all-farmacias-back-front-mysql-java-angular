@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {BarrioRest}
  *
  * @version         2.0
  *

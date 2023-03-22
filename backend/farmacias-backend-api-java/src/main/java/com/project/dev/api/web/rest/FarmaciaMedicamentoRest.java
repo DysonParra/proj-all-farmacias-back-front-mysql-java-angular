@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {FarmaciaMedicamentoRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {FarmaciaMedicamentoRest}
  *
  * @version         2.0
  *

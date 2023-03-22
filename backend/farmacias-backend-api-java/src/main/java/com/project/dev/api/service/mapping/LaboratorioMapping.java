@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {LaboratorioMapping}
  *
  * @version         2.0
  *

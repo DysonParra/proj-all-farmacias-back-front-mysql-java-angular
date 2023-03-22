@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {MedicamentoDTO}
  *
  * @version         2.0
  *

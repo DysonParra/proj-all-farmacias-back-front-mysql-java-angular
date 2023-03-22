@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {LaboratorioRepository}
  *
  * @version         2.0
  *

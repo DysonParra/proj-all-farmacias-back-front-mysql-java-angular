@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PropiedadesRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {PropiedadesRest}
  *
  * @version         2.0
  *

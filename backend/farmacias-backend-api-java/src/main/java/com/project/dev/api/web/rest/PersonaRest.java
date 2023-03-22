@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaRest} se encarga de realizar tareas específicas.
+ * @fileoverview    {PersonaRest}
  *
  * @version         2.0
  *

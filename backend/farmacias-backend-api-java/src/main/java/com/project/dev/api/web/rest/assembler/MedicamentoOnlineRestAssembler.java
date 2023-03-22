@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoOnlineRestAssembler} se encarga de realizar tareas específicas.
+ * @fileoverview    {MedicamentoOnlineRestAssembler}
  *
  * @version         2.0
  *

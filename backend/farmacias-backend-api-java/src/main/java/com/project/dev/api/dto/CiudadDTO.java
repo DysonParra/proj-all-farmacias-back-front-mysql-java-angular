@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CiudadDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {CiudadDTO}
  *
  * @version         2.0
  *

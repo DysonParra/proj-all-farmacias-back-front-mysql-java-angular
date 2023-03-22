@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutenticacionMapping}
  *
  * @version         2.0
  *

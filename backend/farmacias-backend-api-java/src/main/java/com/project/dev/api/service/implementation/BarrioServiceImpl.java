@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {BarrioServiceImpl}
  *
  * @version         2.0
  *

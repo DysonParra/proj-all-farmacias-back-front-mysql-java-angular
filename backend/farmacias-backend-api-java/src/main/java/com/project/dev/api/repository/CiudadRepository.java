@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CiudadRepository} se encarga de realizar tareas específicas.
+ * @fileoverview    {CiudadRepository}
  *
  * @version         2.0
  *

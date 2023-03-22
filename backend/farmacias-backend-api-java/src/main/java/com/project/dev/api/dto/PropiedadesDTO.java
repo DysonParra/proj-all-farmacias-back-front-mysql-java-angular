@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PropiedadesDTO} se encarga de realizar tareas específicas.
+ * @fileoverview    {PropiedadesDTO}
  *
  * @version         2.0
  *

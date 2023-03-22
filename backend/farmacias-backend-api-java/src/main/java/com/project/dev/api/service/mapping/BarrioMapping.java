@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioMapping} se encarga de realizar tareas específicas.
+ * @fileoverview    {BarrioMapping}
  *
  * @version         2.0
  *

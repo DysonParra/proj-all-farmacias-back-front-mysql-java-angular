@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionServiceImpl} se encarga de realizar tareas específicas.
+ * @fileoverview    {AutenticacionServiceImpl}
  *
  * @version         2.0
  *
