@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code TipoPersonaMapping}.
+ * TODO: Description of {@code TipoPersonaMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface TipoPersonaMapping extends GenericMapping<TipoPersonaDTO, TipoP
     public TipoPersonaDTO getDto(TipoPersona entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

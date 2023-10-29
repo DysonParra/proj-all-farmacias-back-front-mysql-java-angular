@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code LaboratorioMedicamentoMapping}.
+ * TODO: Description of {@code LaboratorioMedicamentoMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface LaboratorioMedicamentoMapping extends GenericMapping<Laboratori
     public LaboratorioMedicamentoDTO getDto(LaboratorioMedicamento entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

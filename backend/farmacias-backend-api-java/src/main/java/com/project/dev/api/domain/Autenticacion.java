@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code Autenticacion}.
+ * TODO: Description of {@code Autenticacion}.
  *
  * @author Dyson Parra
  * @since 11

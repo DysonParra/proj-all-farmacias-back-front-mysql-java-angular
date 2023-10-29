@@ -22,7 +22,7 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 /**
- * TODO: Definición de {@code FarmaciaRestAssembler}.
+ * TODO: Description of {@code FarmaciaRestAssembler}.
  *
  * @author Dyson Parra
  * @since 11

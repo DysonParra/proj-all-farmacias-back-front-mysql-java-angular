@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code MedicamentoOnlineMapping}.
+ * TODO: Description of {@code MedicamentoOnlineMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface MedicamentoOnlineMapping extends GenericMapping<MedicamentoOnli
     public MedicamentoOnlineDTO getDto(MedicamentoOnline entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

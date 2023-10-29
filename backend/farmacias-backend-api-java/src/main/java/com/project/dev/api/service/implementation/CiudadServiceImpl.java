@@ -29,7 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * TODO: Definición de {@code CiudadServiceImpl}.
+ * TODO: Description of {@code CiudadServiceImpl}.
  *
  * @author Dyson Parra
  * @since 11

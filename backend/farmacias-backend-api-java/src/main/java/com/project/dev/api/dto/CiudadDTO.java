@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code CiudadDTO}.
+ * TODO: Description of {@code CiudadDTO}.
  *
  * @author Dyson Parra
  * @since 11

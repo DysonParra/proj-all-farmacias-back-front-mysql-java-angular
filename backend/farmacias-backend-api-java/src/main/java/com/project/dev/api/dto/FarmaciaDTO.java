@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code FarmaciaDTO}.
+ * TODO: Description of {@code FarmaciaDTO}.
  *
  * @author Dyson Parra
  * @since 11

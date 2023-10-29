@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code MedicamentoOnline}.
+ * TODO: Description of {@code MedicamentoOnline}.
  *
  * @author Dyson Parra
  * @since 11

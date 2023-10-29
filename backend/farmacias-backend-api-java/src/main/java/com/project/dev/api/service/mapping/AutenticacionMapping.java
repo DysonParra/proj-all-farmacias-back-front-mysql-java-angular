@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code AutenticacionMapping}.
+ * TODO: Description of {@code AutenticacionMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface AutenticacionMapping extends GenericMapping<AutenticacionDTO, A
     public AutenticacionDTO getDto(Autenticacion entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

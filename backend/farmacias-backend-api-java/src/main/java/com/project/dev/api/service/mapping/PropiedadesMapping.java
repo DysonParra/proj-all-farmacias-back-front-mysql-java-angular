@@ -20,7 +20,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 /**
- * TODO: Definición de {@code PropiedadesMapping}.
+ * TODO: Description of {@code PropiedadesMapping}.
  *
  * @author Dyson Parra
  * @since 11
@@ -51,7 +51,7 @@ public interface PropiedadesMapping extends GenericMapping<PropiedadesDTO, Propi
     public PropiedadesDTO getDto(Propiedades entity);
 
     /**
-     * TODO: Definición de {@code withId}.
+     * TODO: Description of {@code withId}.
      *
      * @param strId
      * @return

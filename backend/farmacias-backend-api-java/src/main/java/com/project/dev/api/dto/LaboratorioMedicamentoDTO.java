@@ -22,7 +22,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code LaboratorioMedicamentoDTO}.
+ * TODO: Description of {@code LaboratorioMedicamentoDTO}.
  *
  * @author Dyson Parra
  * @since 11

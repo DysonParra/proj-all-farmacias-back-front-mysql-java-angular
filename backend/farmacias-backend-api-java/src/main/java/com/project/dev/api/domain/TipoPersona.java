@@ -24,7 +24,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * TODO: Definición de {@code TipoPersona}.
+ * TODO: Description of {@code TipoPersona}.
  *
  * @author Dyson Parra
  * @since 11
