@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code PersonaRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class PersonaRestAssembler implements RepresentationModelAssembler<PersonaDTO, EntityModel<PersonaDTO>> {

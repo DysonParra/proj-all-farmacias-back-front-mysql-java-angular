@@ -26,7 +26,7 @@ import org.springframework.data.repository.query.Param;
  * TODO: Definición de {@code MedicamentoOnlineRepository}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @org.springframework.stereotype.Repository
 public interface MedicamentoOnlineRepository extends JpaRepository<MedicamentoOnline, Long> {

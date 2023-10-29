@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * TODO: Definición de {@code LaboratorioRestAssembler}.
  *
  * @author Dyson Parra
- * @since 1.8
+ * @since 11
  */
 @Component
 public class LaboratorioRestAssembler implements RepresentationModelAssembler<LaboratorioDTO, EntityModel<LaboratorioDTO>> {
