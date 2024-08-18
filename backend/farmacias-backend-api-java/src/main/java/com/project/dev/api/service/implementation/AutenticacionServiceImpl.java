@@ -91,8 +91,8 @@ public class AutenticacionServiceImpl implements GenericService<AutenticacionDTO
         Autenticacion entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        AutenticacionDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        AutenticacionDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

@@ -91,8 +91,8 @@ public class BarrioServiceImpl implements GenericService<BarrioDTO> {
         Barrio entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        BarrioDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        BarrioDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

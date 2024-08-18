@@ -91,8 +91,8 @@ public class TipoPersonaServiceImpl implements GenericService<TipoPersonaDTO> {
         TipoPersona entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        TipoPersonaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        TipoPersonaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

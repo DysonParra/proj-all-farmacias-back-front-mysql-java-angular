@@ -91,8 +91,8 @@ public class FarmaciaServiceImpl implements GenericService<FarmaciaDTO> {
         Farmacia entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        FarmaciaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        FarmaciaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

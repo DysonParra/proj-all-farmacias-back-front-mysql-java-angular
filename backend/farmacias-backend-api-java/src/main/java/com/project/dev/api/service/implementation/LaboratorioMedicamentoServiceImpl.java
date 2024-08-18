@@ -91,8 +91,8 @@ public class LaboratorioMedicamentoServiceImpl implements GenericService<Laborat
         LaboratorioMedicamento entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        LaboratorioMedicamentoDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        LaboratorioMedicamentoDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

@@ -91,8 +91,8 @@ public class PropiedadesServiceImpl implements GenericService<PropiedadesDTO> {
         Propiedades entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PropiedadesDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PropiedadesDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

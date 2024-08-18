@@ -91,8 +91,8 @@ public class CiudadServiceImpl implements GenericService<CiudadDTO> {
         Ciudad entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        CiudadDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        CiudadDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**

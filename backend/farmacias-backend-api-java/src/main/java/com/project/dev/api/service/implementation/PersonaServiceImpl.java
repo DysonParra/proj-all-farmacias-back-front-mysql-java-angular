@@ -91,8 +91,8 @@ public class PersonaServiceImpl implements GenericService<PersonaDTO> {
         Persona entity = entityMapping.getEntity(entityDTO);
         entity = entityRepository.save(entity);
 
-        PersonaDTO actualEntity = entityMapping.getDto(entity);
-        return actualEntity;
+        PersonaDTO currrentEntity = entityMapping.getDto(entity);
+        return currrentEntity;
     }
 
     /**
