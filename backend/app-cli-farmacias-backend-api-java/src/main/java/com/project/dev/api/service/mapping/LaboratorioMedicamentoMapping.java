@@ -49,7 +49,7 @@ public interface LaboratorioMedicamentoMapping extends GenericMapping<Laboratori
     public LaboratorioMedicamentoDTO getDto(LaboratorioMedicamento entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

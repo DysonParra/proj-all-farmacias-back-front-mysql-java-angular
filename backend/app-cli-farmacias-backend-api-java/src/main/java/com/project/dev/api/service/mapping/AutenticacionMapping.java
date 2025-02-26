@@ -49,7 +49,7 @@ public interface AutenticacionMapping extends GenericMapping<AutenticacionDTO, A
     public AutenticacionDTO getDto(Autenticacion entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

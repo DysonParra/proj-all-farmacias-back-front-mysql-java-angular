@@ -49,7 +49,7 @@ public interface PropiedadesMapping extends GenericMapping<PropiedadesDTO, Propi
     public PropiedadesDTO getDto(Propiedades entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

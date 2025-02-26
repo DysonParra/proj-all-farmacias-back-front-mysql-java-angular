@@ -49,7 +49,7 @@ public interface FarmaciaMedicamentoMapping extends GenericMapping<FarmaciaMedic
     public FarmaciaMedicamentoDTO getDto(FarmaciaMedicamento entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

@@ -49,7 +49,7 @@ public interface PersonaMapping extends GenericMapping<PersonaDTO, Persona> {
     public PersonaDTO getDto(Persona entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

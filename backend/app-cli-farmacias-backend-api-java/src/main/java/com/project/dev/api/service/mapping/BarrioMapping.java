@@ -49,7 +49,7 @@ public interface BarrioMapping extends GenericMapping<BarrioDTO, Barrio> {
     public BarrioDTO getDto(Barrio entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return

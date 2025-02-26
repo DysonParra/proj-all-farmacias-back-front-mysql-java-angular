@@ -49,7 +49,7 @@ public interface MedicamentoOnlineMapping extends GenericMapping<MedicamentoOnli
     public MedicamentoOnlineDTO getDto(MedicamentoOnline entity);
 
     /**
-     * TODO: Description of {@code withId}.
+     * TODO: Description of method {@code withId}.
      *
      * @param strId
      * @return
