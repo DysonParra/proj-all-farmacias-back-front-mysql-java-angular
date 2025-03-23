@@ -46,7 +46,6 @@ public class Farmacia implements Serializable {
     private String strNombre;
     private String strTelefonoFijo;
     private String strUrlExtraccion;
-    @JoinColumn(name = "intIdBarrio", referencedColumnName = "intIdBarrio")
     private Long intIdBarrio;
 
 }

@@ -41,9 +41,7 @@ public class LaboratorioMedicamento implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intId;
-    @JoinColumn(name = "intIdLaboratorio", referencedColumnName = "intIdLaboratorio")
     private Long intIdLaboratorio;
-    @JoinColumn(name = "intIdMedicamento", referencedColumnName = "intId")
     private Long intIdMedicamento;
 
 }

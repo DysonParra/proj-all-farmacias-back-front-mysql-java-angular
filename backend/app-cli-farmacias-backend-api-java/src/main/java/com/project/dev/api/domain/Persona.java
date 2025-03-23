@@ -46,9 +46,7 @@ public class Persona implements Serializable {
     private String strGenero;
     private String strNombrePersona;
     private String strTelefono;
-    @JoinColumn(name = "intIdBarrio", referencedColumnName = "intIdBarrio")
     private Long intIdBarrio;
-    @JoinColumn(name = "intIdTipoPersona", referencedColumnName = "intIdTipoPersona")
     private Long intIdTipoPersona;
 
 }

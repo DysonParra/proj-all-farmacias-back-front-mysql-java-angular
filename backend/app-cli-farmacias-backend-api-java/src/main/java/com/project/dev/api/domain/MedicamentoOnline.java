@@ -56,7 +56,6 @@ public class MedicamentoOnline implements Serializable {
     private String strPresentacion;
     private String strPrincipioActivo;
     private String strRegistroInvima;
-    @JoinColumn(name = "intIdPortalOrigen", referencedColumnName = "intCodigoFarmacia")
     private Long intIdPortalOrigen;
 
 }

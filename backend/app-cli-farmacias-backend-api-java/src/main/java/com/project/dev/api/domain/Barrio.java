@@ -42,7 +42,6 @@ public class Barrio implements Serializable {
     @Column(nullable = false)
     private Long intIdBarrio;
     private String strNombre;
-    @JoinColumn(name = "intIdCiudad", referencedColumnName = "intIdCiudad")
     private Long intIdCiudad;
 
 }
