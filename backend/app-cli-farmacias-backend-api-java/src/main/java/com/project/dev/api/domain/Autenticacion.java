@@ -39,9 +39,8 @@ public class Autenticacion implements Serializable {
 
     @Id
     @Basic(optional = false)
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false)
     private String strUsuario;
-    @Column(length = 50)
     private String strContrasena;
 
 }

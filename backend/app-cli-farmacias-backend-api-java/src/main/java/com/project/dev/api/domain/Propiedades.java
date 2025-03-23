@@ -41,13 +41,9 @@ public class Propiedades implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdPropiedad;
-    @Column(length = 100)
     private String strDescripcionPropiedad;
-    @Column(length = 100)
     private String strGrupo;
-    @Column(length = 100)
     private String strNombrePropiedad;
-    @Column(length = 500)
     private String strValorPropiedad;
 
 }

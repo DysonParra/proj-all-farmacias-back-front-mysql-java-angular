@@ -45,31 +45,18 @@ public class Medicamento implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaCreacion;
     private Long intIdLaboratorio;
-    @Column(length = 200)
     private String strAccionTerapeutica;
-    @Column(length = 10)
     private String strCantidad;
-    @Column(length = 100)
     private String strCodigoAtc;
-    @Column(length = 20)
     private String strConcentracion;
-    @Column(length = 100)
     private String strEan;
-    @Column(length = 100)
     private String strMarca;
-    @Column(length = 200)
     private String strNombre;
-    @Column(length = 100)
     private String strNombreComercial;
-    @Column(length = 60)
     private String strNombreGenerico;
-    @Column(length = 100)
     private String strPresentacion;
-    @Column(length = 100)
     private String strPrincipioActivo;
-    @Column(length = 100)
     private String strRegistroInvima;
-    @Column(length = 20)
     private String strUnidadMedida;
 
 }

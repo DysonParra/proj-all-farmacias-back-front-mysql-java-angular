@@ -41,9 +41,7 @@ public class TipoPersona implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdTipoPersona;
-    @Column(length = 200)
     private String strDescripcion;
-    @Column(length = 20)
     private String strNombre;
 
 }

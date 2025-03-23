@@ -43,9 +43,7 @@ public class Ciudad implements Serializable {
     private Long intIdCiudad;
     private Integer intIdDane;
     private Integer intIdEstado;
-    @Column(length = 200)
     private String strEstado;
-    @Column(length = 200)
     private String strNombre;
 
 }

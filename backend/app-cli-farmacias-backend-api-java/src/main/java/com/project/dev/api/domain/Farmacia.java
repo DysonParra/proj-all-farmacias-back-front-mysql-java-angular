@@ -41,15 +41,10 @@ public class Farmacia implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intCodigoFarmacia;
-    @Column(length = 255)
     private String strCelular;
-    @Column(length = 20)
     private String strNit;
-    @Column(length = 200)
     private String strNombre;
-    @Column(length = 20)
     private String strTelefonoFijo;
-    @Column(length = 4000)
     private String strUrlExtraccion;
     @JoinColumn(name = "intIdBarrio", referencedColumnName = "intIdBarrio")
     private Long intIdBarrio;

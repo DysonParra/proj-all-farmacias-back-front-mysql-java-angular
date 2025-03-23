@@ -43,31 +43,18 @@ public class MedicamentoOnline implements Serializable {
     private Long intIdMedicamento;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaDescarga;
-    @Column(length = 10)
     private String strCantidad;
-    @Column(length = 100)
     private String strConcentracion;
-    @Column(length = 500)
     private String strDescripcion;
-    @Column(length = 100)
     private String strEan;
-    @Column(length = 8000)
     private String strImagen;
-    @Column(length = 100)
     private String strLaboratorio;
-    @Column(length = 100)
     private String strMarca;
-    @Column(length = 100)
     private String strNombre;
-    @Column(length = 30)
     private String strPaginaProducto;
-    @Column(length = 20)
     private String strPrecioUnitario;
-    @Column(length = 100)
     private String strPresentacion;
-    @Column(length = 100)
     private String strPrincipioActivo;
-    @Column(length = 100)
     private String strRegistroInvima;
     @JoinColumn(name = "intIdPortalOrigen", referencedColumnName = "intCodigoFarmacia")
     private Long intIdPortalOrigen;

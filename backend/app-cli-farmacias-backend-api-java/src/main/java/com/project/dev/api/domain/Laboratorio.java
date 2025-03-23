@@ -41,12 +41,10 @@ public class Laboratorio implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdLaboratorio;
-    @Column(length = 200)
     private String strDireccion;
     @Basic(optional = false)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private String strNit;
-    @Column(length = 150)
     private String strNombre;
 
 }
