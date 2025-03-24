@@ -2,20 +2,20 @@ DROP DATABASE IF EXISTS `farmacias`;
 CREATE DATABASE IF NOT EXISTS `farmacias`;
 USE `farmacias`;
 
-CREATE TABLE IF NOT EXISTS `Autenticacion` (
+CREATE TABLE IF NOT EXISTS `autenticacion` (
     `strUsuario`                        VARCHAR(30)         NOT NULL,
     `strContrasena`                     VARCHAR(50)             NULL DEFAULT NULL,
     PRIMARY KEY (`strUsuario`)
 );
 
-CREATE TABLE IF NOT EXISTS `Barrio` (
+CREATE TABLE IF NOT EXISTS `barrio` (
     `intIdBarrio`                       BIGINT(20)          NOT NULL,
     `intIdCiudad`                       BIGINT(20)              NULL DEFAULT NULL,
     `strNombre`                         VARCHAR(200)            NULL DEFAULT NULL,
     PRIMARY KEY (`intIdBarrio`)
 );
 
-CREATE TABLE IF NOT EXISTS `Ciudad` (
+CREATE TABLE IF NOT EXISTS `ciudad` (
     `intIdCiudad`                       BIGINT(20)          NOT NULL,
     `intIdDane`                         INT(11)                 NULL DEFAULT NULL,
     `intIdEstado`                       INT(11)                 NULL DEFAULT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `Ciudad` (
     PRIMARY KEY (`intIdCiudad`)
 );
 
-CREATE TABLE IF NOT EXISTS `Farmacia` (
+CREATE TABLE IF NOT EXISTS `farmacia` (
     `intCodigoFarmacia`                 BIGINT(20)          NOT NULL,
     `intIdBarrio`                       BIGINT(20)              NULL DEFAULT NULL,
     `strCelular`                        VARCHAR(255)            NULL DEFAULT NULL,
@@ -35,14 +35,14 @@ CREATE TABLE IF NOT EXISTS `Farmacia` (
     PRIMARY KEY (`intCodigoFarmacia`)
 );
 
-CREATE TABLE IF NOT EXISTS `FarmaciaMedicamento` (
+CREATE TABLE IF NOT EXISTS `farmacia_medicamento` (
     `intId`                             BIGINT(20)          NOT NULL,
     `intIdFarmacia`                     BIGINT(20)              NULL DEFAULT NULL,
     `intIdMedicamento`                  BIGINT(20)              NULL DEFAULT NULL,
     PRIMARY KEY (`intId`)
 );
 
-CREATE TABLE IF NOT EXISTS `Laboratorio` (
+CREATE TABLE IF NOT EXISTS `laboratorio` (
     `intIdLaboratorio`                  BIGINT(20)          NOT NULL,
     `strDireccion`                      VARCHAR(200)            NULL DEFAULT NULL,
     `strNit`                            VARCHAR(20)         NOT NULL,
@@ -50,14 +50,14 @@ CREATE TABLE IF NOT EXISTS `Laboratorio` (
     PRIMARY KEY (`intIdLaboratorio`)
 );
 
-CREATE TABLE IF NOT EXISTS `LaboratorioMedicamento` (
+CREATE TABLE IF NOT EXISTS `laboratorio_medicamento` (
     `intId`                             BIGINT(20)          NOT NULL,
     `intIdLaboratorio`                  BIGINT(20)              NULL DEFAULT NULL,
     `intIdMedicamento`                  BIGINT(20)              NULL DEFAULT NULL,
     PRIMARY KEY (`intId`)
 );
 
-CREATE TABLE IF NOT EXISTS `Medicamento` (
+CREATE TABLE IF NOT EXISTS `medicamento` (
     `intId`                             BIGINT(20)          NOT NULL,
     `bitMedicamentoPos`                 BIT(1)                  NULL DEFAULT NULL,
     `dtFechaCreacion`                   DATETIME                NULL DEFAULT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `Medicamento` (
     PRIMARY KEY (`intId`)
 );
 
-CREATE TABLE IF NOT EXISTS `MedicamentoOnline` (
+CREATE TABLE IF NOT EXISTS `medicamento_online` (
     `intIdMedicamento`                  BIGINT(20)          NOT NULL,
     `dtFechaDescarga`                   DATETIME                NULL DEFAULT NULL,
     `intIdPortalOrigen`                 BIGINT(20)              NULL DEFAULT NULL,
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `MedicamentoOnline` (
     PRIMARY KEY (`intIdMedicamento`)
 );
 
-CREATE TABLE IF NOT EXISTS `Persona` (
+CREATE TABLE IF NOT EXISTS `persona` (
     `intIdPersona`                      BIGINT(20)          NOT NULL,
     `intIdBarrio`                       BIGINT(20)              NULL DEFAULT NULL,
     `intIdTipoPersona`                  BIGINT(20)              NULL DEFAULT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `Persona` (
     PRIMARY KEY (`intIdPersona`)
 );
 
-CREATE TABLE IF NOT EXISTS `Propiedades` (
+CREATE TABLE IF NOT EXISTS `propiedades` (
     `intIdPropiedad`                    BIGINT(20)          NOT NULL,
     `strDescripcionPropiedad`           VARCHAR(100)            NULL DEFAULT NULL,
     `strGrupo`                          VARCHAR(100)            NULL DEFAULT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `Propiedades` (
     PRIMARY KEY (`intIdPropiedad`)
 );
 
-CREATE TABLE IF NOT EXISTS `TipoPersona` (
+CREATE TABLE IF NOT EXISTS `tipo_persona` (
     `intIdTipoPersona`                  BIGINT(20)          NOT NULL,
     `strDescripcion`                    VARCHAR(200)            NULL DEFAULT NULL,
     `strNombre`                         VARCHAR(20)             NULL DEFAULT NULL,
