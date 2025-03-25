@@ -88,7 +88,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento")
+    @GetMapping("/farmacia-medicamento")
     public CollectionModel<EntityModel<FarmaciaMedicamentoDTO>> getAllEntities() {
         log.debug("REST request to get all entities type FarmaciaMedicamento");
         List<EntityModel<FarmaciaMedicamentoDTO>> entities = null;
@@ -118,14 +118,14 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento/pages")
+    @GetMapping("/farmacia-medicamento/pages")
     public ResponseEntity<CollectionModel<EntityModel<FarmaciaMedicamentoDTO>>> getAllEntitiesPaged(Pageable pageable) {
         log.debug("REST request to get a page of all entities type FarmaciaMedicamento");
         Page<FarmaciaMedicamentoDTO> page = null;
         List<EntityModel<FarmaciaMedicamentoDTO>> entities = null;
         try {
             page = entityService.getAllEntitiesPaged(pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/FarmaciaMedicamento/pages");
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/farmacia-medicamento/pages");
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
@@ -151,7 +151,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PostMapping("/FarmaciaMedicamento")
+    @PostMapping("/farmacia-medicamento")
     public ResponseEntity<?> saveEntity(@RequestBody FarmaciaMedicamentoDTO entityDTO) {
         log.debug("POST request to save a new entity type FarmaciaMedicamento");
         EntityModel<FarmaciaMedicamentoDTO> resource = null;
@@ -180,7 +180,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @PutMapping("/FarmaciaMedicamento/{id}")
+    @PutMapping("/farmacia-medicamento/{id}")
     public ResponseEntity<?> updateEntity(@RequestBody FarmaciaMedicamentoDTO entityDTO, @PathVariable String id) {
         return saveEntity(entityDTO);
     }
@@ -198,7 +198,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento/{id}")
+    @GetMapping("/farmacia-medicamento/{id}")
     public ResponseEntity<EntityModel<FarmaciaMedicamentoDTO>> getEntity(@PathVariable String id) {
         log.debug(String.format("REST request to get the entity type FarmaciaMedicamento with id {} ", id));
         try {
@@ -224,7 +224,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @DeleteMapping("/FarmaciaMedicamento/{id}")
+    @DeleteMapping("/farmacia-medicamento/{id}")
     public ResponseEntity<?> deleteEntity(@PathVariable String id) {
         log.debug("DELETE request to delete the entity FarmaciaMedicamento with id : {}", id);
         try {
@@ -248,7 +248,7 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento/search/{query}")
+    @GetMapping("/farmacia-medicamento/search/{query}")
     public CollectionModel<EntityModel<FarmaciaMedicamentoDTO>> searchEntities(@PathVariable String query) {
         log.debug("REST request to get the entities type FarmaciaMedicamento with the search : {} ", query);
         List<EntityModel<FarmaciaMedicamentoDTO>> entities = null;
@@ -279,14 +279,14 @@ public class FarmaciaMedicamentoRest {
         @ApiResponse(code = 403, message = "Prohibido acceder al recurso que intenta alcanzar"),
         @ApiResponse(code = 404, message = "No se encuentra el recurso que intentabas alcanzar")
     })
-    @GetMapping("/FarmaciaMedicamento/search/{query}/pages")
+    @GetMapping("/farmacia-medicamento/search/{query}/pages")
     public ResponseEntity<CollectionModel<EntityModel<FarmaciaMedicamentoDTO>>> searchEntitiesPaged(@PathVariable String query, Pageable pageable) {
         log.debug("REST request to get a page of the entities type FarmaciaMedicamento with the search : {}", query);
         Page<FarmaciaMedicamentoDTO> page = null;
         List<EntityModel<FarmaciaMedicamentoDTO>> entities = null;
         try {
             page = entityService.searchEntitiesPaged(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/FarmaciaMedicamento/search/{query}/pages/" + query);
+            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/farmacia-medicamento/search/{query}/pages/" + query);
             entities = page.getContent().parallelStream()
                     .map(entityRestAssembler::toModel)
                     .collect(Collectors.toList());
