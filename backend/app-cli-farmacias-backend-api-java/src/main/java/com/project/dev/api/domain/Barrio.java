@@ -42,7 +42,7 @@ public class Barrio implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdBarrio;
-    private String strNombre;
     private Long intIdCiudad;
+    private String strNombre;
 
 }

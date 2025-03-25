@@ -42,11 +42,11 @@ public class Farmacia implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intCodigoFarmacia;
+    private Long intIdBarrio;
     private String strCelular;
     private String strNit;
     private String strNombre;
     private String strTelefonoFijo;
     private String strUrlExtraccion;
-    private Long intIdBarrio;
 
 }

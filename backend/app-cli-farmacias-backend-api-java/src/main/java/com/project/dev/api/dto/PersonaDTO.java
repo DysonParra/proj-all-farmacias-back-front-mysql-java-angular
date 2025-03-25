@@ -35,12 +35,12 @@ import lombok.NoArgsConstructor;
 public class PersonaDTO {
 
     private Long intIdPersona;
+    private Long intIdBarrio;
+    private Long intIdTipoPersona;
     private String strApellidoPersona;
     private String strDireccion;
     private String strGenero;
     private String strNombrePersona;
     private String strTelefono;
-    private Long intIdBarrio;
-    private Long intIdTipoPersona;
 
 }

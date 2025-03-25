@@ -35,7 +35,7 @@ import lombok.NoArgsConstructor;
 public class BarrioDTO {
 
     private Long intIdBarrio;
-    private String strNombre;
     private Long intIdCiudad;
+    private String strNombre;
 
 }

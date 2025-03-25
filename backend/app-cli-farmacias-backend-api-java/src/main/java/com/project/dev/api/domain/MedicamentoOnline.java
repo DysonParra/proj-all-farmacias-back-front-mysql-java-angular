@@ -44,6 +44,7 @@ public class MedicamentoOnline implements Serializable {
     private Long intIdMedicamento;
     @Temporal(TemporalType.TIMESTAMP)
     private Date dtFechaDescarga;
+    private Long intIdPortalOrigen;
     private String strCantidad;
     private String strConcentracion;
     private String strDescripcion;
@@ -57,6 +58,5 @@ public class MedicamentoOnline implements Serializable {
     private String strPresentacion;
     private String strPrincipioActivo;
     private String strRegistroInvima;
-    private Long intIdPortalOrigen;
 
 }

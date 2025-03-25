@@ -36,6 +36,7 @@ public class MedicamentoOnlineDTO {
 
     private Long intIdMedicamento;
     private Date dtFechaDescarga;
+    private Long intIdPortalOrigen;
     private String strCantidad;
     private String strConcentracion;
     private String strDescripcion;
@@ -49,6 +50,5 @@ public class MedicamentoOnlineDTO {
     private String strPresentacion;
     private String strPrincipioActivo;
     private String strRegistroInvima;
-    private Long intIdPortalOrigen;
 
 }

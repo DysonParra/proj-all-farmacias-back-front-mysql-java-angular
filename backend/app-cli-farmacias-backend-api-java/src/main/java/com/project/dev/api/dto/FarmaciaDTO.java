@@ -35,11 +35,11 @@ import lombok.NoArgsConstructor;
 public class FarmaciaDTO {
 
     private Long intCodigoFarmacia;
+    private Long intIdBarrio;
     private String strCelular;
     private String strNit;
     private String strNombre;
     private String strTelefonoFijo;
     private String strUrlExtraccion;
-    private Long intIdBarrio;
 
 }

@@ -42,12 +42,12 @@ public class Persona implements Serializable {
     @Basic(optional = false)
     @Column(nullable = false)
     private Long intIdPersona;
+    private Long intIdBarrio;
+    private Long intIdTipoPersona;
     private String strApellidoPersona;
     private String strDireccion;
     private String strGenero;
     private String strNombrePersona;
     private String strTelefono;
-    private Long intIdBarrio;
-    private Long intIdTipoPersona;
 
 }
