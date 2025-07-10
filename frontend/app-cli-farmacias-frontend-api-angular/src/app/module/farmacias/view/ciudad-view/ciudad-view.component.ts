@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CiudadViewComponent}
+ * @overview        {CiudadViewComponent}
  *
  * @version         2.0
  *

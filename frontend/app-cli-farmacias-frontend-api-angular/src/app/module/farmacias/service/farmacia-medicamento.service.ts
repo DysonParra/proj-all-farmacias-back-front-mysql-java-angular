@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {FarmaciaMedicamentoService}
+ * @overview        {FarmaciaMedicamentoService}
  *
  * @version         2.0
  *

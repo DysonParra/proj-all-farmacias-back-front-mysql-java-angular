@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioDTO}
+ * @overview        {BarrioDTO}
  *
  * @version         2.0
  *

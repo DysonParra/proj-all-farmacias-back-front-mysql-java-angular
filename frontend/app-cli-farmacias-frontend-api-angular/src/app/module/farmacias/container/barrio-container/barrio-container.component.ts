@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioContainerComponent}
+ * @overview        {BarrioContainerComponent}
  *
  * @version         2.0
  *

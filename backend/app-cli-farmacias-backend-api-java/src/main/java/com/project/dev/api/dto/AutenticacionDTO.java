@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionDTO}
+ * @overview        {AutenticacionDTO}
  *
  * @version         2.0
  *

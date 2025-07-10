@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {FarmaciasModule}
+ * @overview        {FarmaciasModule}
  *
  * @version         2.0
  *
@@ -46,57 +46,68 @@ import { AutenticacionService } from './service/autenticacion.service';
 import { AutenticacionComponent } from './component/autenticacion/autenticacion.component';
 import { AutenticacionContainerComponent } from './container/autenticacion-container/autenticacion-container.component';
 import { AutenticacionViewComponent } from './view/autenticacion-view/autenticacion-view.component';
-import { BarrioFacade } from './facade/barrio.facade';
+
+import { BarrioFacade } from './facade/barrio.facade';
 import { BarrioService } from './service/barrio.service';
 import { BarrioComponent } from './component/barrio/barrio.component';
 import { BarrioContainerComponent } from './container/barrio-container/barrio-container.component';
 import { BarrioViewComponent } from './view/barrio-view/barrio-view.component';
-import { CiudadFacade } from './facade/ciudad.facade';
+
+import { CiudadFacade } from './facade/ciudad.facade';
 import { CiudadService } from './service/ciudad.service';
 import { CiudadComponent } from './component/ciudad/ciudad.component';
 import { CiudadContainerComponent } from './container/ciudad-container/ciudad-container.component';
 import { CiudadViewComponent } from './view/ciudad-view/ciudad-view.component';
-import { FarmaciaFacade } from './facade/farmacia.facade';
+
+import { FarmaciaFacade } from './facade/farmacia.facade';
 import { FarmaciaService } from './service/farmacia.service';
 import { FarmaciaComponent } from './component/farmacia/farmacia.component';
 import { FarmaciaContainerComponent } from './container/farmacia-container/farmacia-container.component';
 import { FarmaciaViewComponent } from './view/farmacia-view/farmacia-view.component';
-import { FarmaciaMedicamentoFacade } from './facade/farmacia-medicamento.facade';
+
+import { FarmaciaMedicamentoFacade } from './facade/farmacia-medicamento.facade';
 import { FarmaciaMedicamentoService } from './service/farmacia-medicamento.service';
 import { FarmaciaMedicamentoComponent } from './component/farmacia-medicamento/farmacia-medicamento.component';
 import { FarmaciaMedicamentoContainerComponent } from './container/farmacia-medicamento-container/farmacia-medicamento-container.component';
 import { FarmaciaMedicamentoViewComponent } from './view/farmacia-medicamento-view/farmacia-medicamento-view.component';
-import { LaboratorioFacade } from './facade/laboratorio.facade';
+
+import { LaboratorioFacade } from './facade/laboratorio.facade';
 import { LaboratorioService } from './service/laboratorio.service';
 import { LaboratorioComponent } from './component/laboratorio/laboratorio.component';
 import { LaboratorioContainerComponent } from './container/laboratorio-container/laboratorio-container.component';
 import { LaboratorioViewComponent } from './view/laboratorio-view/laboratorio-view.component';
-import { LaboratorioMedicamentoFacade } from './facade/laboratorio-medicamento.facade';
+
+import { LaboratorioMedicamentoFacade } from './facade/laboratorio-medicamento.facade';
 import { LaboratorioMedicamentoService } from './service/laboratorio-medicamento.service';
 import { LaboratorioMedicamentoComponent } from './component/laboratorio-medicamento/laboratorio-medicamento.component';
 import { LaboratorioMedicamentoContainerComponent } from './container/laboratorio-medicamento-container/laboratorio-medicamento-container.component';
 import { LaboratorioMedicamentoViewComponent } from './view/laboratorio-medicamento-view/laboratorio-medicamento-view.component';
-import { MedicamentoFacade } from './facade/medicamento.facade';
+
+import { MedicamentoFacade } from './facade/medicamento.facade';
 import { MedicamentoService } from './service/medicamento.service';
 import { MedicamentoComponent } from './component/medicamento/medicamento.component';
 import { MedicamentoContainerComponent } from './container/medicamento-container/medicamento-container.component';
 import { MedicamentoViewComponent } from './view/medicamento-view/medicamento-view.component';
-import { MedicamentoOnlineFacade } from './facade/medicamento-online.facade';
+
+import { MedicamentoOnlineFacade } from './facade/medicamento-online.facade';
 import { MedicamentoOnlineService } from './service/medicamento-online.service';
 import { MedicamentoOnlineComponent } from './component/medicamento-online/medicamento-online.component';
 import { MedicamentoOnlineContainerComponent } from './container/medicamento-online-container/medicamento-online-container.component';
 import { MedicamentoOnlineViewComponent } from './view/medicamento-online-view/medicamento-online-view.component';
-import { PersonaFacade } from './facade/persona.facade';
+
+import { PersonaFacade } from './facade/persona.facade';
 import { PersonaService } from './service/persona.service';
 import { PersonaComponent } from './component/persona/persona.component';
 import { PersonaContainerComponent } from './container/persona-container/persona-container.component';
 import { PersonaViewComponent } from './view/persona-view/persona-view.component';
-import { PropiedadesFacade } from './facade/propiedades.facade';
+
+import { PropiedadesFacade } from './facade/propiedades.facade';
 import { PropiedadesService } from './service/propiedades.service';
 import { PropiedadesComponent } from './component/propiedades/propiedades.component';
 import { PropiedadesContainerComponent } from './container/propiedades-container/propiedades-container.component';
 import { PropiedadesViewComponent } from './view/propiedades-view/propiedades-view.component';
-import { TipoPersonaFacade } from './facade/tipo-persona.facade';
+
+import { TipoPersonaFacade } from './facade/tipo-persona.facade';
 import { TipoPersonaService } from './service/tipo-persona.service';
 import { TipoPersonaComponent } from './component/tipo-persona/tipo-persona.component';
 import { TipoPersonaContainerComponent } from './container/tipo-persona-container/tipo-persona-container.component';
@@ -115,27 +126,38 @@ import { FarmaciasRoutingModule } from '@app/module/farmacias/farmacias.routing.
     declarations: [
         AutenticacionComponent,
         AutenticacionContainerComponent,
-        AutenticacionViewComponent,        BarrioComponent,
+        AutenticacionViewComponent,
+        BarrioComponent,
         BarrioContainerComponent,
-        BarrioViewComponent,        CiudadComponent,
+        BarrioViewComponent,
+        CiudadComponent,
         CiudadContainerComponent,
-        CiudadViewComponent,        FarmaciaComponent,
+        CiudadViewComponent,
+        FarmaciaComponent,
         FarmaciaContainerComponent,
-        FarmaciaViewComponent,        FarmaciaMedicamentoComponent,
+        FarmaciaViewComponent,
+        FarmaciaMedicamentoComponent,
         FarmaciaMedicamentoContainerComponent,
-        FarmaciaMedicamentoViewComponent,        LaboratorioComponent,
+        FarmaciaMedicamentoViewComponent,
+        LaboratorioComponent,
         LaboratorioContainerComponent,
-        LaboratorioViewComponent,        LaboratorioMedicamentoComponent,
+        LaboratorioViewComponent,
+        LaboratorioMedicamentoComponent,
         LaboratorioMedicamentoContainerComponent,
-        LaboratorioMedicamentoViewComponent,        MedicamentoComponent,
+        LaboratorioMedicamentoViewComponent,
+        MedicamentoComponent,
         MedicamentoContainerComponent,
-        MedicamentoViewComponent,        MedicamentoOnlineComponent,
+        MedicamentoViewComponent,
+        MedicamentoOnlineComponent,
         MedicamentoOnlineContainerComponent,
-        MedicamentoOnlineViewComponent,        PersonaComponent,
+        MedicamentoOnlineViewComponent,
+        PersonaComponent,
         PersonaContainerComponent,
-        PersonaViewComponent,        PropiedadesComponent,
+        PersonaViewComponent,
+        PropiedadesComponent,
         PropiedadesContainerComponent,
-        PropiedadesViewComponent,        TipoPersonaComponent,
+        PropiedadesViewComponent,
+        TipoPersonaComponent,
         TipoPersonaContainerComponent,
         TipoPersonaViewComponent,
     ],
@@ -171,21 +193,43 @@ import { FarmaciasRoutingModule } from '@app/module/farmacias/farmacias.routing.
         SharedModule
     ],
     exports: [
-        AutenticacionViewComponent,        BarrioViewComponent,        CiudadViewComponent,        FarmaciaViewComponent,        FarmaciaMedicamentoViewComponent,        LaboratorioViewComponent,        LaboratorioMedicamentoViewComponent,        MedicamentoViewComponent,        MedicamentoOnlineViewComponent,        PersonaViewComponent,        PropiedadesViewComponent,        TipoPersonaViewComponent,
+        AutenticacionViewComponent,
+        BarrioViewComponent,
+        CiudadViewComponent,
+        FarmaciaViewComponent,
+        FarmaciaMedicamentoViewComponent,
+        LaboratorioViewComponent,
+        LaboratorioMedicamentoViewComponent,
+        MedicamentoViewComponent,
+        MedicamentoOnlineViewComponent,
+        PersonaViewComponent,
+        PropiedadesViewComponent,
+        TipoPersonaViewComponent,
     ],
     providers: [
         AutenticacionFacade,
-        AutenticacionService,        BarrioFacade,
-        BarrioService,        CiudadFacade,
-        CiudadService,        FarmaciaFacade,
-        FarmaciaService,        FarmaciaMedicamentoFacade,
-        FarmaciaMedicamentoService,        LaboratorioFacade,
-        LaboratorioService,        LaboratorioMedicamentoFacade,
-        LaboratorioMedicamentoService,        MedicamentoFacade,
-        MedicamentoService,        MedicamentoOnlineFacade,
-        MedicamentoOnlineService,        PersonaFacade,
-        PersonaService,        PropiedadesFacade,
-        PropiedadesService,        TipoPersonaFacade,
+        AutenticacionService,
+        BarrioFacade,
+        BarrioService,
+        CiudadFacade,
+        CiudadService,
+        FarmaciaFacade,
+        FarmaciaService,
+        FarmaciaMedicamentoFacade,
+        FarmaciaMedicamentoService,
+        LaboratorioFacade,
+        LaboratorioService,
+        LaboratorioMedicamentoFacade,
+        LaboratorioMedicamentoService,
+        MedicamentoFacade,
+        MedicamentoService,
+        MedicamentoOnlineFacade,
+        MedicamentoOnlineService,
+        PersonaFacade,
+        PersonaService,
+        PropiedadesFacade,
+        PropiedadesService,
+        TipoPersonaFacade,
         TipoPersonaService,
     ]
 })

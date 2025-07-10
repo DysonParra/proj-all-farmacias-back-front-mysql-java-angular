@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionRestAssembler}
+ * @overview        {AutenticacionRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioFacade}
+ * @overview        {LaboratorioFacade}
  *
  * @version         2.0
  *

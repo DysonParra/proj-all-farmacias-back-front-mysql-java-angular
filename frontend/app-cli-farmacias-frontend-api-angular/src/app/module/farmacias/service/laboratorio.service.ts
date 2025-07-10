@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioService}
+ * @overview        {LaboratorioService}
  *
  * @version         2.0
  *

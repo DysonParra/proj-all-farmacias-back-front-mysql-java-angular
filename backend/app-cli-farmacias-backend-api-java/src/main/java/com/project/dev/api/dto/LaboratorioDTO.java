@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioDTO}
+ * @overview        {LaboratorioDTO}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PropiedadesComponent}
+ * @overview        {PropiedadesComponent}
  *
  * @version         2.0
  *

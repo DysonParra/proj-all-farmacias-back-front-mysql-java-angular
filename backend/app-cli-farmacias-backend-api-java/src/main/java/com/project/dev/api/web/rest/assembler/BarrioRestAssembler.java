@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioRestAssembler}
+ * @overview        {BarrioRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoRepository}
+ * @overview        {MedicamentoRepository}
  *
  * @version         2.0
  *

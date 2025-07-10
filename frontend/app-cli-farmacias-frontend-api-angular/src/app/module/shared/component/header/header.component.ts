@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {HeaderComponent}
+ * @overview        {HeaderComponent}
  *
  * @version         2.0
  *
@@ -44,47 +44,58 @@ export class HeaderComponent implements OnInit {
                 name: 'Autenticacion',
                 route: 'autenticacion',
                 items: []
-            },            {
+            },
+            {
                 name: 'Barrio',
                 route: 'barrio',
                 items: []
-            },            {
+            },
+            {
                 name: 'Ciudad',
                 route: 'ciudad',
                 items: []
-            },            {
+            },
+            {
                 name: 'Farmacia',
                 route: 'farmacia',
                 items: []
-            },            {
+            },
+            {
                 name: 'FarmaciaMedicamento',
                 route: 'farmacia-medicamento',
                 items: []
-            },            {
+            },
+            {
                 name: 'Laboratorio',
                 route: 'laboratorio',
                 items: []
-            },            {
+            },
+            {
                 name: 'LaboratorioMedicamento',
                 route: 'laboratorio-medicamento',
                 items: []
-            },            {
+            },
+            {
                 name: 'Medicamento',
                 route: 'medicamento',
                 items: []
-            },            {
+            },
+            {
                 name: 'MedicamentoOnline',
                 route: 'medicamento-online',
                 items: []
-            },            {
+            },
+            {
                 name: 'Persona',
                 route: 'persona',
                 items: []
-            },            {
+            },
+            {
                 name: 'Propiedades',
                 route: 'propiedades',
                 items: []
-            },            {
+            },
+            {
                 name: 'TipoPersona',
                 route: 'tipo-persona',
                 items: []

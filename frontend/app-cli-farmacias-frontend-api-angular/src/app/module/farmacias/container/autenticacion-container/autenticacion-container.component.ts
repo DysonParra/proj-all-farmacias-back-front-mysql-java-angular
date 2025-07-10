@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionContainerComponent}
+ * @overview        {AutenticacionContainerComponent}
  *
  * @version         2.0
  *

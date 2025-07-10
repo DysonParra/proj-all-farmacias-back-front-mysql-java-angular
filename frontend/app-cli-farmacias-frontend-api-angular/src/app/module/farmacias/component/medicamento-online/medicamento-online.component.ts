@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoOnlineComponent}
+ * @overview        {MedicamentoOnlineComponent}
  *
  * @version         2.0
  *

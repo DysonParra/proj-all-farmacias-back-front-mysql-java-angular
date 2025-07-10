@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaState}
+ * @overview        {PersonaState}
  *
  * @version         2.0
  *

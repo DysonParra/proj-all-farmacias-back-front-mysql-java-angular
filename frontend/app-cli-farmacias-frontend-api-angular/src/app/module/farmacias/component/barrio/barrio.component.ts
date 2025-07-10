@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioComponent}
+ * @overview        {BarrioComponent}
  *
  * @version         2.0
  *

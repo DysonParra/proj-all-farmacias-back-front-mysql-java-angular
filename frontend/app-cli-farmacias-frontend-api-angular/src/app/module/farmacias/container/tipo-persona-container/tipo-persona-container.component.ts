@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaContainerComponent}
+ * @overview        {TipoPersonaContainerComponent}
  *
  * @version         2.0
  *

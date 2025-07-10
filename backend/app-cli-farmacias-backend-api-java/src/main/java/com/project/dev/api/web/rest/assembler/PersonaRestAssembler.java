@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaRestAssembler}
+ * @overview        {PersonaRestAssembler}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaRepository}
+ * @overview        {TipoPersonaRepository}
  *
  * @version         2.0
  *

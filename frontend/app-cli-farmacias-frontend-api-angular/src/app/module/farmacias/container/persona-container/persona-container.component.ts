@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaContainerComponent}
+ * @overview        {PersonaContainerComponent}
  *
  * @version         2.0
  *

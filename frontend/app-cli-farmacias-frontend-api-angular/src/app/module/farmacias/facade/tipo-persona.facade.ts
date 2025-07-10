@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaFacade}
+ * @overview        {TipoPersonaFacade}
  *
  * @version         2.0
  *

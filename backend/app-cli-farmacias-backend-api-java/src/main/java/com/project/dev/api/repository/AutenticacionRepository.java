@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionRepository}
+ * @overview        {AutenticacionRepository}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioViewModel}
+ * @overview        {LaboratorioViewModel}
  *
  * @version         2.0
  *

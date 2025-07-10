@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {CiudadRestAssembler}
+ * @overview        {CiudadRestAssembler}
  *
  * @version         2.0
  *

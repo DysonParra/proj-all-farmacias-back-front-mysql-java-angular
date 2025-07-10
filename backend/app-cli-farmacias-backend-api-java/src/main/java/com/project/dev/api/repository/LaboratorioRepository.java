@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioRepository}
+ * @overview        {LaboratorioRepository}
  *
  * @version         2.0
  *

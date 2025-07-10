@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {BarrioFacade}
+ * @overview        {BarrioFacade}
  *
  * @version         2.0
  *

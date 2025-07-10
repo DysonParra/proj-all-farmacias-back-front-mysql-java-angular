@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioContainerComponent}
+ * @overview        {LaboratorioContainerComponent}
  *
  * @version         2.0
  *

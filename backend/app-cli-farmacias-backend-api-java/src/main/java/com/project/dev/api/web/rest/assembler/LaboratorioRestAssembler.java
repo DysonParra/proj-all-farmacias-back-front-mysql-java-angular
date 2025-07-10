@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {LaboratorioRestAssembler}
+ * @overview        {LaboratorioRestAssembler}
  *
  * @version         2.0
  *

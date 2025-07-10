@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {FarmaciaRestAssembler}
+ * @overview        {FarmaciaRestAssembler}
  *
  * @version         2.0
  *

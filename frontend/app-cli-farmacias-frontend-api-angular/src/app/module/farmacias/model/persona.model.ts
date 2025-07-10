@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {PersonaViewModel}
+ * @overview        {PersonaViewModel}
  *
  * @version         2.0
  *

@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {AutenticacionViewModel}
+ * @overview        {AutenticacionViewModel}
  *
  * @version         2.0
  *

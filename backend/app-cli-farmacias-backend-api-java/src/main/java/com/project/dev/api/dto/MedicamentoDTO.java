@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {MedicamentoDTO}
+ * @overview        {MedicamentoDTO}
  *
  * @version         2.0
  *

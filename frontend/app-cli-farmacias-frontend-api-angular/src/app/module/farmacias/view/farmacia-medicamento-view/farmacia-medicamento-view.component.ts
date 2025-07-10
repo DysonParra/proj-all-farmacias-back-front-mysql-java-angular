@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {FarmaciaMedicamentoViewComponent}
+ * @overview        {FarmaciaMedicamentoViewComponent}
  *
  * @version         2.0
  *

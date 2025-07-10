@@ -1,5 +1,5 @@
 /*
- * @fileoverview    {TipoPersonaViewComponent}
+ * @overview        {TipoPersonaViewComponent}
  *
  * @version         2.0
  *
