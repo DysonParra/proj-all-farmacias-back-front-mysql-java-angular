@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { FarmaciaViewModel } from '../../model/farmacia.model';
 import { FarmaciaFacade } from '../../facade/farmacia.facade';
+import { FarmaciaComponent } from '../../component/farmacia/farmacia.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code FarmaciaContainerComponent}.
@@ -26,8 +28,8 @@ import { FarmaciaFacade } from '../../facade/farmacia.facade';
 @Component({
     selector: 'app-farmacia-container',
     templateUrl: './farmacia-container.component.html',
-    standalone: false,
-    styleUrls: ['./farmacia-container.component.css']
+    styleUrls: ['./farmacia-container.component.css'],
+    imports: [FarmaciaComponent, PaginationComponent]
 })
 export class FarmaciaContainerComponent extends GenericContainerComponent<FarmaciaViewModel> {
 

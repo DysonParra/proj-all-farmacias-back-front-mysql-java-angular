@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { MedicamentoViewModel } from '../../model/medicamento.model';
 import { MedicamentoFacade } from '../../facade/medicamento.facade';
+import { MedicamentoComponent } from '../../component/medicamento/medicamento.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code MedicamentoContainerComponent}.
@@ -26,8 +28,8 @@ import { MedicamentoFacade } from '../../facade/medicamento.facade';
 @Component({
     selector: 'app-medicamento-container',
     templateUrl: './medicamento-container.component.html',
-    standalone: false,
-    styleUrls: ['./medicamento-container.component.css']
+    styleUrls: ['./medicamento-container.component.css'],
+    imports: [MedicamentoComponent, PaginationComponent]
 })
 export class MedicamentoContainerComponent extends GenericContainerComponent<MedicamentoViewModel> {
 

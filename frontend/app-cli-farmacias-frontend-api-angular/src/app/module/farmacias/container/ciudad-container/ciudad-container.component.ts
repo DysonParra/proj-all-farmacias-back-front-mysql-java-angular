@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { CiudadViewModel } from '../../model/ciudad.model';
 import { CiudadFacade } from '../../facade/ciudad.facade';
+import { CiudadComponent } from '../../component/ciudad/ciudad.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code CiudadContainerComponent}.
@@ -26,8 +28,8 @@ import { CiudadFacade } from '../../facade/ciudad.facade';
 @Component({
     selector: 'app-ciudad-container',
     templateUrl: './ciudad-container.component.html',
-    standalone: false,
-    styleUrls: ['./ciudad-container.component.css']
+    styleUrls: ['./ciudad-container.component.css'],
+    imports: [CiudadComponent, PaginationComponent]
 })
 export class CiudadContainerComponent extends GenericContainerComponent<CiudadViewModel> {
 

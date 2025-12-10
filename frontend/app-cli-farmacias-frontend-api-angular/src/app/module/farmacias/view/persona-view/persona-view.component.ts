@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { PersonaContainerComponent } from '../../container/persona-container/persona-container.component';
 
 /**
  * TODO: Description of {@code PersonaViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-persona-view',
     templateUrl: './persona-view.component.html',
-    standalone: false,
-    styleUrls: ['./persona-view.component.css']
+    styleUrls: ['./persona-view.component.css'],
+    imports: [PersonaContainerComponent]
 })
 export class PersonaViewComponent implements OnInit {
 

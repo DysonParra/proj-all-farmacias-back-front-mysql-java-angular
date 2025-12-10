@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { LaboratorioMedicamentoViewModel } from '../../model/laboratorio-medicamento.model';
 import { LaboratorioMedicamentoFacade } from '../../facade/laboratorio-medicamento.facade';
+import { LaboratorioMedicamentoComponent } from '../../component/laboratorio-medicamento/laboratorio-medicamento.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code LaboratorioMedicamentoContainerComponent}.
@@ -26,8 +28,8 @@ import { LaboratorioMedicamentoFacade } from '../../facade/laboratorio-medicamen
 @Component({
     selector: 'app-laboratorio-medicamento-container',
     templateUrl: './laboratorio-medicamento-container.component.html',
-    standalone: false,
-    styleUrls: ['./laboratorio-medicamento-container.component.css']
+    styleUrls: ['./laboratorio-medicamento-container.component.css'],
+    imports: [LaboratorioMedicamentoComponent, PaginationComponent]
 })
 export class LaboratorioMedicamentoContainerComponent extends GenericContainerComponent<LaboratorioMedicamentoViewModel> {
 

@@ -34,9 +34,9 @@ import { PaginationComponent } from './component/pagination/pagination.component
     imports: [
         CommonModule,
         DxMenuModule,
-        RouterModule
+        RouterModule,
+        HeaderComponent, FooterComponent, PaginationComponent
     ],
-    declarations: [HeaderComponent, FooterComponent, PaginationComponent],
     exports: [HeaderComponent, FooterComponent, PaginationComponent]
 })
 export class SharedModule { }

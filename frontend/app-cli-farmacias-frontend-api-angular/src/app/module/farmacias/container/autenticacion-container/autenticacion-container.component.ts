@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { AutenticacionViewModel } from '../../model/autenticacion.model';
 import { AutenticacionFacade } from '../../facade/autenticacion.facade';
+import { AutenticacionComponent } from '../../component/autenticacion/autenticacion.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code AutenticacionContainerComponent}.
@@ -26,8 +28,8 @@ import { AutenticacionFacade } from '../../facade/autenticacion.facade';
 @Component({
     selector: 'app-autenticacion-container',
     templateUrl: './autenticacion-container.component.html',
-    standalone: false,
-    styleUrls: ['./autenticacion-container.component.css']
+    styleUrls: ['./autenticacion-container.component.css'],
+    imports: [AutenticacionComponent, PaginationComponent]
 })
 export class AutenticacionContainerComponent extends GenericContainerComponent<AutenticacionViewModel> {
 

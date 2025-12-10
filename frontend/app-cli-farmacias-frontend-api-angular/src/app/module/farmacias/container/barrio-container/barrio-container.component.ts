@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { BarrioViewModel } from '../../model/barrio.model';
 import { BarrioFacade } from '../../facade/barrio.facade';
+import { BarrioComponent } from '../../component/barrio/barrio.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code BarrioContainerComponent}.
@@ -26,8 +28,8 @@ import { BarrioFacade } from '../../facade/barrio.facade';
 @Component({
     selector: 'app-barrio-container',
     templateUrl: './barrio-container.component.html',
-    standalone: false,
-    styleUrls: ['./barrio-container.component.css']
+    styleUrls: ['./barrio-container.component.css'],
+    imports: [BarrioComponent, PaginationComponent]
 })
 export class BarrioContainerComponent extends GenericContainerComponent<BarrioViewModel> {
 

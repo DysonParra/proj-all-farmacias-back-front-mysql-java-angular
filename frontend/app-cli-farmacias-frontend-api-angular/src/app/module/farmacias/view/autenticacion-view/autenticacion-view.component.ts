@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { AutenticacionContainerComponent } from '../../container/autenticacion-container/autenticacion-container.component';
 
 /**
  * TODO: Description of {@code AutenticacionViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-autenticacion-view',
     templateUrl: './autenticacion-view.component.html',
-    standalone: false,
-    styleUrls: ['./autenticacion-view.component.css']
+    styleUrls: ['./autenticacion-view.component.css'],
+    imports: [AutenticacionContainerComponent]
 })
 export class AutenticacionViewComponent implements OnInit {
 

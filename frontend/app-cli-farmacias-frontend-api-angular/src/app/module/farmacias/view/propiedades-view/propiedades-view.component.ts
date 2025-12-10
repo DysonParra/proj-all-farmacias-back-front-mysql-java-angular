@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { PropiedadesContainerComponent } from '../../container/propiedades-container/propiedades-container.component';
 
 /**
  * TODO: Description of {@code PropiedadesViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-propiedades-view',
     templateUrl: './propiedades-view.component.html',
-    standalone: false,
-    styleUrls: ['./propiedades-view.component.css']
+    styleUrls: ['./propiedades-view.component.css'],
+    imports: [PropiedadesContainerComponent]
 })
 export class PropiedadesViewComponent implements OnInit {
 

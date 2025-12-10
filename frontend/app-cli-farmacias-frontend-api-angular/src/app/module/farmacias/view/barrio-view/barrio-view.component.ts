@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { BarrioContainerComponent } from '../../container/barrio-container/barrio-container.component';
 
 /**
  * TODO: Description of {@code BarrioViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-barrio-view',
     templateUrl: './barrio-view.component.html',
-    standalone: false,
-    styleUrls: ['./barrio-view.component.css']
+    styleUrls: ['./barrio-view.component.css'],
+    imports: [BarrioContainerComponent]
 })
 export class BarrioViewComponent implements OnInit {
 

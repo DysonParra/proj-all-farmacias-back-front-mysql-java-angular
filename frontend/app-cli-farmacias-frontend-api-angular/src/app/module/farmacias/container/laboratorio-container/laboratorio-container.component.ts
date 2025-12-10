@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { LaboratorioViewModel } from '../../model/laboratorio.model';
 import { LaboratorioFacade } from '../../facade/laboratorio.facade';
+import { LaboratorioComponent } from '../../component/laboratorio/laboratorio.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code LaboratorioContainerComponent}.
@@ -26,8 +28,8 @@ import { LaboratorioFacade } from '../../facade/laboratorio.facade';
 @Component({
     selector: 'app-laboratorio-container',
     templateUrl: './laboratorio-container.component.html',
-    standalone: false,
-    styleUrls: ['./laboratorio-container.component.css']
+    styleUrls: ['./laboratorio-container.component.css'],
+    imports: [LaboratorioComponent, PaginationComponent]
 })
 export class LaboratorioContainerComponent extends GenericContainerComponent<LaboratorioViewModel> {
 

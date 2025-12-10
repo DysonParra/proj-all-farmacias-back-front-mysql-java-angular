@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { NgFor, NgIf, NgClass, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 /**
  * TODO: Description of {@code PaginationComponent}.
@@ -23,8 +24,8 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 @Component({
     selector: 'app-pagination',
     templateUrl: './pagination.component.html',
-    standalone: false,
-    styleUrls: ['./pagination.component.css']
+    styleUrls: ['./pagination.component.css'],
+    imports: [NgFor, NgIf, NgClass, NgSwitch, NgSwitchCase, NgSwitchDefault]
 })
 export class PaginationComponent implements OnInit, OnChanges {
 

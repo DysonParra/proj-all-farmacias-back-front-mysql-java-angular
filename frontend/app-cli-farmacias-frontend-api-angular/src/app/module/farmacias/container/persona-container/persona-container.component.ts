@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { PersonaViewModel } from '../../model/persona.model';
 import { PersonaFacade } from '../../facade/persona.facade';
+import { PersonaComponent } from '../../component/persona/persona.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code PersonaContainerComponent}.
@@ -26,8 +28,8 @@ import { PersonaFacade } from '../../facade/persona.facade';
 @Component({
     selector: 'app-persona-container',
     templateUrl: './persona-container.component.html',
-    standalone: false,
-    styleUrls: ['./persona-container.component.css']
+    styleUrls: ['./persona-container.component.css'],
+    imports: [PersonaComponent, PaginationComponent]
 })
 export class PersonaContainerComponent extends GenericContainerComponent<PersonaViewModel> {
 

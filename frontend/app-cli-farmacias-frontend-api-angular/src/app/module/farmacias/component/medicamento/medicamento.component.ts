@@ -15,6 +15,9 @@
 import { Component } from '@angular/core';
 import { GenericComponent } from '@app/module/essential/component/generic.component';
 import { MedicamentoViewModel } from '../../model/medicamento.model';
+import { DxDataGridModule, DxLoadPanelModule } from 'devextreme-angular';
+import { DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule } from 'devextreme-angular/ui/nested';
+import { NgFor, NgIf } from '@angular/common';
 
 /**
  * TODO: Description of {@code MedicamentoComponent}.
@@ -25,8 +28,8 @@ import { MedicamentoViewModel } from '../../model/medicamento.model';
 @Component({
     selector: 'app-medicamento',
     templateUrl: './medicamento.component.html',
-    standalone: false,
-    styleUrls: ['./medicamento.component.css']
+    styleUrls: ['./medicamento.component.css'],
+    imports: [DxDataGridModule, DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule, NgFor, NgIf, DxLoadPanelModule]
 })
 export class MedicamentoComponent extends GenericComponent<MedicamentoViewModel> {
 

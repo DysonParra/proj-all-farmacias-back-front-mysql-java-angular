@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { TipoPersonaContainerComponent } from '../../container/tipo-persona-container/tipo-persona-container.component';
 
 /**
  * TODO: Description of {@code TipoPersonaViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-tipo-persona-view',
     templateUrl: './tipo-persona-view.component.html',
-    standalone: false,
-    styleUrls: ['./tipo-persona-view.component.css']
+    styleUrls: ['./tipo-persona-view.component.css'],
+    imports: [TipoPersonaContainerComponent]
 })
 export class TipoPersonaViewComponent implements OnInit {
 

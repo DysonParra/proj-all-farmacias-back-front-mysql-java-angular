@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { PropiedadesViewModel } from '../../model/propiedades.model';
 import { PropiedadesFacade } from '../../facade/propiedades.facade';
+import { PropiedadesComponent } from '../../component/propiedades/propiedades.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code PropiedadesContainerComponent}.
@@ -26,8 +28,8 @@ import { PropiedadesFacade } from '../../facade/propiedades.facade';
 @Component({
     selector: 'app-propiedades-container',
     templateUrl: './propiedades-container.component.html',
-    standalone: false,
-    styleUrls: ['./propiedades-container.component.css']
+    styleUrls: ['./propiedades-container.component.css'],
+    imports: [PropiedadesComponent, PaginationComponent]
 })
 export class PropiedadesContainerComponent extends GenericContainerComponent<PropiedadesViewModel> {
 

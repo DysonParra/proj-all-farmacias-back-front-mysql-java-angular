@@ -15,6 +15,9 @@
 import { Component } from '@angular/core';
 import { GenericComponent } from '@app/module/essential/component/generic.component';
 import { LaboratorioMedicamentoViewModel } from '../../model/laboratorio-medicamento.model';
+import { DxDataGridModule, DxLoadPanelModule } from 'devextreme-angular';
+import { DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule } from 'devextreme-angular/ui/nested';
+import { NgFor, NgIf } from '@angular/common';
 
 /**
  * TODO: Description of {@code LaboratorioMedicamentoComponent}.
@@ -25,8 +28,8 @@ import { LaboratorioMedicamentoViewModel } from '../../model/laboratorio-medicam
 @Component({
     selector: 'app-laboratorio-medicamento',
     templateUrl: './laboratorio-medicamento.component.html',
-    standalone: false,
-    styleUrls: ['./laboratorio-medicamento.component.css']
+    styleUrls: ['./laboratorio-medicamento.component.css'],
+    imports: [DxDataGridModule, DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule, NgFor, NgIf, DxLoadPanelModule]
 })
 export class LaboratorioMedicamentoComponent extends GenericComponent<LaboratorioMedicamentoViewModel> {
 

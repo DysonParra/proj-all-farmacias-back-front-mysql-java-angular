@@ -15,6 +15,9 @@
 import { Component } from '@angular/core';
 import { GenericComponent } from '@app/module/essential/component/generic.component';
 import { PropiedadesViewModel } from '../../model/propiedades.model';
+import { DxDataGridModule, DxLoadPanelModule } from 'devextreme-angular';
+import { DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule } from 'devextreme-angular/ui/nested';
+import { NgFor, NgIf } from '@angular/common';
 
 /**
  * TODO: Description of {@code PropiedadesComponent}.
@@ -25,8 +28,8 @@ import { PropiedadesViewModel } from '../../model/propiedades.model';
 @Component({
     selector: 'app-propiedades',
     templateUrl: './propiedades.component.html',
-    standalone: false,
-    styleUrls: ['./propiedades.component.css']
+    styleUrls: ['./propiedades.component.css'],
+    imports: [DxDataGridModule, DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule, NgFor, NgIf, DxLoadPanelModule]
 })
 export class PropiedadesComponent extends GenericComponent<PropiedadesViewModel> {
 

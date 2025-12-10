@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { MedicamentoOnlineContainerComponent } from '../../container/medicamento-online-container/medicamento-online-container.component';
 
 /**
  * TODO: Description of {@code MedicamentoOnlineViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-medicamento-online-view',
     templateUrl: './medicamento-online-view.component.html',
-    standalone: false,
-    styleUrls: ['./medicamento-online-view.component.css']
+    styleUrls: ['./medicamento-online-view.component.css'],
+    imports: [MedicamentoOnlineContainerComponent]
 })
 export class MedicamentoOnlineViewComponent implements OnInit {
 

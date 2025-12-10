@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { LaboratorioMedicamentoContainerComponent } from '../../container/laboratorio-medicamento-container/laboratorio-medicamento-container.component';
 
 /**
  * TODO: Description of {@code LaboratorioMedicamentoViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-laboratorio-medicamento-view',
     templateUrl: './laboratorio-medicamento-view.component.html',
-    standalone: false,
-    styleUrls: ['./laboratorio-medicamento-view.component.css']
+    styleUrls: ['./laboratorio-medicamento-view.component.css'],
+    imports: [LaboratorioMedicamentoContainerComponent]
 })
 export class LaboratorioMedicamentoViewComponent implements OnInit {
 

@@ -123,7 +123,35 @@ import { FarmaciasRoutingModule } from '@app/module/farmacias/farmacias.routing.
  * @since Angular 19, Node JS 22
  */
 @NgModule({
-    declarations: [
+    imports: [
+        // ng modules
+        CommonModule,
+        DxBoxModule,
+        DxButtonModule,
+        DxCalendarModule,
+        DxCheckBoxModule,
+        DxContextMenuModule,
+        DxDataGridModule,
+        DxDateBoxModule,
+        DxDrawerModule,
+        DxDropDownBoxModule,
+        DxDropDownButtonModule,
+        DxFormModule,
+        DxHtmlEditorModule,
+        DxListModule,
+        DxLoadPanelModule,
+        DxPopupModule,
+        DxRadioGroupModule,
+        DxSchedulerModule,
+        DxScrollViewModule,
+        DxSelectBoxModule,
+        DxTemplateModule,
+        DxTextBoxModule,
+        DxToolbarModule,
+        DxValidatorModule,
+        // Own modules
+        FarmaciasRoutingModule,
+        SharedModule,
         AutenticacionComponent,
         AutenticacionContainerComponent,
         AutenticacionViewComponent,
@@ -159,38 +187,7 @@ import { FarmaciasRoutingModule } from '@app/module/farmacias/farmacias.routing.
         PropiedadesViewComponent,
         TipoPersonaComponent,
         TipoPersonaContainerComponent,
-        TipoPersonaViewComponent,
-    ],
-    imports: [
-        // ng modules
-        CommonModule,
-        DxBoxModule,
-        DxButtonModule,
-        DxCalendarModule,
-        DxCheckBoxModule,
-        DxContextMenuModule,
-        DxDataGridModule,
-        DxDateBoxModule,
-        DxDrawerModule,
-        DxDropDownBoxModule,
-        DxDropDownButtonModule,
-        DxFormModule,
-        DxHtmlEditorModule,
-        DxListModule,
-        DxLoadPanelModule,
-        DxPopupModule,
-        DxRadioGroupModule,
-        DxSchedulerModule,
-        DxScrollViewModule,
-        DxSelectBoxModule,
-        DxTemplateModule,
-        DxTextBoxModule,
-        DxToolbarModule,
-        DxValidatorModule,
-
-        // Own modules
-        FarmaciasRoutingModule,
-        SharedModule
+        TipoPersonaViewComponent
     ],
     exports: [
         AutenticacionViewComponent,

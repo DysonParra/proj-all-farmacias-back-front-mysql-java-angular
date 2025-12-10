@@ -13,6 +13,7 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit } from '@angular/core';
+import { CiudadContainerComponent } from '../../container/ciudad-container/ciudad-container.component';
 
 /**
  * TODO: Description of {@code CiudadViewComponent}.
@@ -23,8 +24,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-ciudad-view',
     templateUrl: './ciudad-view.component.html',
-    standalone: false,
-    styleUrls: ['./ciudad-view.component.css']
+    styleUrls: ['./ciudad-view.component.css'],
+    imports: [CiudadContainerComponent]
 })
 export class CiudadViewComponent implements OnInit {
 

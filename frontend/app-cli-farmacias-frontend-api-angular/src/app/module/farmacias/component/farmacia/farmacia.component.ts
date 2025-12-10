@@ -15,6 +15,9 @@
 import { Component } from '@angular/core';
 import { GenericComponent } from '@app/module/essential/component/generic.component';
 import { FarmaciaViewModel } from '../../model/farmacia.model';
+import { DxDataGridModule, DxLoadPanelModule } from 'devextreme-angular';
+import { DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule } from 'devextreme-angular/ui/nested';
+import { NgFor, NgIf } from '@angular/common';
 
 /**
  * TODO: Description of {@code FarmaciaComponent}.
@@ -25,8 +28,8 @@ import { FarmaciaViewModel } from '../../model/farmacia.model';
 @Component({
     selector: 'app-farmacia',
     templateUrl: './farmacia.component.html',
-    standalone: false,
-    styleUrls: ['./farmacia.component.css']
+    styleUrls: ['./farmacia.component.css'],
+    imports: [DxDataGridModule, DxoPagingModule, DxoPagerModule, DxoSelectionModule, DxoSortingModule, DxoEditingModule, DxoFilterRowModule, DxoHeaderFilterModule, DxoSearchPanelModule, DxoGroupPanelModule, DxoStateStoringModule, DxoColumnChooserModule, DxoExportModule, DxiColumnModule, DxiValidationRuleModule, NgFor, NgIf, DxLoadPanelModule]
 })
 export class FarmaciaComponent extends GenericComponent<FarmaciaViewModel> {
 

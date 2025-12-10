@@ -13,7 +13,10 @@
  * @version 2.0     Documentation added.
  */
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Routes, Router } from '@angular/router';
+import { Routes, Router, RouterLinkActive, RouterLink } from '@angular/router';
+import { DxMenuModule } from 'devextreme-angular';
+import { DxTemplateModule } from 'devextreme-angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 
 /**
  * TODO: Description of {@code HeaderComponent}.
@@ -24,8 +27,8 @@ import { Routes, Router } from '@angular/router';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
-    standalone: false,
-    styleUrls: ['./header.component.css']
+    styleUrls: ['./header.component.css'],
+    imports: [DxMenuModule, RouterLinkActive, RouterLink, DxTemplateModule, NgTemplateOutlet]
 })
 export class HeaderComponent implements OnInit {
 

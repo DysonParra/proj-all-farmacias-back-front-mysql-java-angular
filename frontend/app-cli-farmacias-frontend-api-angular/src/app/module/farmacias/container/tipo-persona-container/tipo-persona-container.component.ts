@@ -16,6 +16,8 @@ import { Component } from '@angular/core';
 import { GenericContainerComponent } from '@app/module/essential/container/generic-container.component';
 import { TipoPersonaViewModel } from '../../model/tipo-persona.model';
 import { TipoPersonaFacade } from '../../facade/tipo-persona.facade';
+import { TipoPersonaComponent } from '../../component/tipo-persona/tipo-persona.component';
+import { PaginationComponent } from '../../../shared/component/pagination/pagination.component';
 
 /**
  * TODO: Description of {@code TipoPersonaContainerComponent}.
@@ -26,8 +28,8 @@ import { TipoPersonaFacade } from '../../facade/tipo-persona.facade';
 @Component({
     selector: 'app-tipo-persona-container',
     templateUrl: './tipo-persona-container.component.html',
-    standalone: false,
-    styleUrls: ['./tipo-persona-container.component.css']
+    styleUrls: ['./tipo-persona-container.component.css'],
+    imports: [TipoPersonaComponent, PaginationComponent]
 })
 export class TipoPersonaContainerComponent extends GenericContainerComponent<TipoPersonaViewModel> {
 
